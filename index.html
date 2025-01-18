@@ -11,117 +11,134 @@
 </head>
 <body>
     <header>
-        <i><img src="img/menu.png" alt="Icono del menu"></i>
+        <i id="menuIcon"><img src="img/menu.png" alt="Icono del menu"></i>
         <img src="img/logo.png" alt="Logo de Adidas">
-        <i><img src="img/shopping_car.png" alt="Icono de carrito"></i>
+        <i id="cartIcon"><img src="img/shopping_car.png" alt="Icono de carrito"><span class="cart-count">00</span></i>
     </header>
 
     <main>        
         <section class="banner">
-            <h2>Productos nuevos</h2>
+            <h1>Productos nuevos</h1>
             <p>Conoce nuestros productos nuevos</p>
         </section>
 
         <section class="products">
             <article>
-                <img src="img/products/Conjunto_Crew_Ninos_Negro_IX5150_01_laydown.avif" alt="Conjunto Crew Niños Negro">
-                <h3>Conjunto Crew Niños</h3>
-                <p>$1,049.00</p>
+                <img class="product-image" src="img/products/Conjunto_Crew_Ninos_Negro_IX5150_01_laydown.avif" alt="Conjunto Crew Niños Negro">
+                <h3 class="product-title">Conjunto Crew Niños</h3>
+                <p class="product-price" data-id="001" data-price="1049.00">$1,049.00</p>
+                <button class="btn add-cart">Agregar al carrito</button>
             </article>
             <article>
-                <img src="img/products/Jersey_Nino_Tigres_Tercero_UANL_24-25_Blanco_IV6098_21_model.avif" alt="Jersey Niño Tigres Tercero UANL 24-25 Blanco">
-                <h3>Jersey Niño Tigres Tercero UANL 24/25</h3>
-                <p>$1,599.00</p>
+                <img class="product-image" src="img/products/Jersey_Nino_Tigres_Tercero_UANL_24-25_Blanco_IV6098_21_model.avif" alt="Jersey Niño Tigres Tercero UANL 24-25 Blanco">
+                <h3 class="product-title">Jersey Niño Tigres Tercero UANL 24/25</h3>
+                <p class="product-price" data-id="002" data-price="1599.00">$1,599.00</p>
+                <button class="btn add-cart">Agregar al carrito</button>
             </article>
             <article>
-                <img src="img/products/MT_FZ_FLEECE_Gris_JC9615_HM1.avif" alt="MT FZ FLEECE Gris">
-                <h3>MT FZ FLEECE</h3>
-                <p>$1,399.00</p>
+                <img class="product-image" src="img/products/MT_FZ_FLEECE_Gris_JC9615_HM1.avif" alt="MT FZ FLEECE Gris">
+                <h3 class="product-title">MT FZ FLEECE</h3>
+                <p class="product-price" data-id="003" data-price="1399.00">$1,399.00</p>
+                <button class="btn add-cart">Agregar al carrito</button>
             </article>
             <article>
-                <img src="img/products/Tenis_Run_72_Azul_IH8601_01_standard.avif" alt="Tenis Run 72 Azul">
-                <h3>Tenis Run 72</h3>
-                <p>$1,349.00</p>
+                <img class="product-image" class="product-image" src="img/products/Tenis_Run_72_Azul_IH8601_01_standard.avif" alt="Tenis Run 72 Azul">
+                <h3 class="product-title">Tenis Run 72</h3>
+                <p class="product-price" data-id="004" data-price="1349.00">$1,349.00</p>
+                <button class="btn add-cart">Agregar al carrito</button>
             </article>
             <article>
-                <img src="img/products/W_3S_FT_CRO_HD_Rojo_IS6997_21_model.avif" alt="W 3S FT CRO HD Rojo">
-                <h3>W 3S FT CRO HD</h3>
-                <p>$999.00</p>
+                <img class="product-image" src="img/products/W_3S_FT_CRO_HD_Rojo_IS6997_21_model.avif" alt="W 3S FT CRO HD Rojo">
+                <h3 class="product-title">W 3S FT CRO HD</h3>
+                <p class="product-price" data-id="005" data-price="999.00">$999.00</p>
+                <button class="btn add-cart">Agregar al carrito</button>
             </article>
             <article>
-                <img src="img/products/W_LIN_SJ_T_Blanco_JC8239_21_model.avif" alt="W LIN SJ T Blanco">
-                <h3>W LIN SJ T</h3>
-                <p>$299.00</p>
+                <img class="product-image" src="img/products/W_LIN_SJ_T_Blanco_JC8239_21_model.avif" alt="W LIN SJ T Blanco">
+                <h3 class="product-title">W LIN SJ T</h3>
+                <p class="product-price" data-id="006" data-price="299.00">$299.00</p>
+                <button class="btn add-cart">Agregar al carrito</button>
             </article>
             <article>
-                <img src="img/products/Pants_Deportivos_Rasant_Cut_Line_Rojo_JY4616_21_model.avif" alt="Pants Deportivos Rasant Cut Line Rojo">
-                <h3>Pants Deportivos Rasant Cut Line</h3>
-                <p>$2,099.00</p>
+                <img class="product-image" src="img/products/Pants_Deportivos_Rasant_Cut_Line_Rojo_JY4616_21_model.avif" alt="Pants Deportivos Rasant Cut Line Rojo">
+                <h3 class="product-title">Pants Deportivos Rasant Cut Line</h3>
+                <p class="product-price" data-id="007" data-price="2099.00">$2,099.00</p>
+                <button class="btn add-cart">Agregar al carrito</button>
             </article>
             <article>
-                <img src="img/products/Tenis_Run_72_Verde_IH8589_01_standard.avif" alt="Tenis Run 72 Verde">
-                <h3>Tenis Run 72</h3>
-                <p>$1,299.00</p>
+                <img class="product-image" src="img/products/Tenis_Run_72_Verde_IH8589_01_standard.avif" alt="Tenis Run 72 Verde">
+                <h3 class="product-title">Tenis Run 72</h3>
+                <p class="product-price" data-id="008" data-price="1299.00">$1,299.00</p>
+                <button class="btn add-cart">Agregar al carrito</button>
             </article>
             <article>
-                <img src="img/products/Tenis_Gazelle_Rosa_H01512_01_standard.avif" alt="Tenis Gazelle Rosa">
-                <h3>Tenis Gazelle</h3>
-                <p>$1,349.00</p>
+                <img class="product-image" src="img/products/Tenis_Gazelle_Rosa_H01512_01_standard.avif" alt="Tenis Gazelle Rosa">
+                <h3 class="product-title">Tenis Gazelle</h3>
+                <p class="product-price" data-id="009" data-price="1349.00">$1,349.00</p>
+                <button class="btn add-cart">Agregar al carrito</button>
             </article>
             <article>
-                <img src="img/products/jersey-visitante-messi-inter-miami-cf-25-26.avif" alt="Negro Jersey Visitante Messi Inter Miami CF 25/26">
+                <img class="product-image" src="img/products/jersey-visitante-messi-inter-miami-cf-25-26.avif" alt="Negro Jersey Visitante Messi Inter Miami CF 25/26">
                 <h3>Jersey Visitante Messi Inter Miami CF 25/26</h3>
-                <p>$1,899.00</p>
+                <p class="product-price" data-id="010" data-price="1899.00">$1,899.00</p>
+                <button class="btn add-cart">Agregar al carrito</button>
             </article>
             <article>
-                <img src="img/products/playera-padel-category-aeroready-estampada.avif" alt="Azul Playera Padel Category AEROREADY Estampada">
-                <h3>Playera Padel Category AEROREADY Estampada</h3>
-                <p>$699.00</p>
+                <img class="product-image" src="img/products/playera-padel-category-aeroready-estampada.avif" alt="Azul Playera Padel Category AEROREADY Estampada">
+                <h3 class="product-title">Playera Padel Category AEROREADY Estampada</h3>
+                <p class="product-price" data-id="011" data-price="699.00">$699.00</p>
+                <button class="btn add-cart">Agregar al carrito</button>
             </article>
             <article>
-                <img src="img/products/tuanl-dna-pnt.avif" alt="Blanco TUANL DNA PNT">
-                <h3>TUANL DNA PNT</h3>
-                <p>$1,299.00</p>
+                <img class="product-image" src="img/products/tuanl-dna-pnt.avif" alt="Blanco TUANL DNA PNT">
+                <h3 class="product-title">TUANL DNA PNT</h3>
+                <p class="product-price" data-id="012" data-price="1299.00">$1,299.00</p>
+                <button class="btn add-cart">Agregar al carrito</button>
             </article>
             <article>
-                <img src="img/products/Playera_Prepartido_Real_Madrid_24-25_Blanco_JJ3493_21_model.avif" alt="Blanco Playera Prepartido Real Madrid 24/25">
-                <h3>Playera Prepartido Real Madrid 24/25</h3>
-                <p>$1,599.00</p>
+                <img class="product-image" src="img/products/Playera_Prepartido_Real_Madrid_24-25_Blanco_JJ3493_21_model.avif" alt="Blanco Playera Prepartido Real Madrid 24/25">
+                <h3 class="product-title">Playera Prepartido Real Madrid 24/25</h3>
+                <p class="product-price" data-id="013" data-price="1599.00">$1,599.00</p>
+                <button class="btn add-cart">Agregar al carrito</button>
             </article>
             <article>
-                <img src="img/products/SUPERSTAR_II_Blanco_JQ4728_01_00_standard.avif" alt="Blanco SUPERSTAR II">
-                <h3>SUPERSTAR II</h3>
-                <p>$2,299.00</p>
+                <img class="product-image" src="img/products/SUPERSTAR_II_Blanco_JQ4728_01_00_standard.avif" alt="Blanco SUPERSTAR II">
+                <h3 class="product-title">SUPERSTAR II</h3>
+                <p class="product-price" data-id="014" data-price="2299.00">$2,299.00</p>
+                <button class="btn add-cart">Agregar al carrito</button>
             </article>
             <article>
-                <img src="img/products/Tacos_Samba_Messi_Rosa_JP7844_22_model.avif" alt="Rosa Tacos Samba Messi">
-                <h3>Tacos Samba Messi</h3>
-                <p>$2,299.00</p>
+                <img class="product-image" src="img/products/Tacos_Samba_Messi_Rosa_JP7844_22_model.avif" alt="Rosa Tacos Samba Messi">
+                <h3 class="product-title">Tacos Samba Messi</h3>
+                <p class="product-price" data-id="015" data-price="2299.00">$2,299.00</p>
+                <button class="btn add-cart">Agregar al carrito</button>
             </article>
         </section>
 
         <section class="cart">
+            <span class="close-icon close-cart">X</span>
             <h2>Carrito</h2>
-            <div>
-                <img src="img/products/Conjunto_Crew_Ninos_Negro_IX5150_01_laydown.avif" alt="Chamarra Adidas Adicolor negra">
-                <p>Conjunto Crew Niños</p>
-                <p>$1,049.00</p>                
-                <i><img src="img/remove.png" alt="Icono de remover producto del carrito" class="delete-icon"></i>
+            <p class="cart-empty">Agrega algunos articulos</p>
+            <div class="cart-total">
+                <p>Total</p>
+                <p class="cart-amount">$0.00</p>
             </div>
-            <div>
-                <img src="img/products/Conjunto_Crew_Ninos_Negro_IX5150_01_laydown.avif" alt="Chamarra Adidas Adicolor negra">
-                <p>Conjunto Crew Niños</p>
-                <p>$1,049.00</p>                
-                <i><img src="img/remove.png" alt="Icono de remover producto del carrito" class="delete-icon"></i>
-            </div>
-            <div>
-                <img src="img/products/Conjunto_Crew_Ninos_Negro_IX5150_01_laydown.avif" alt="Chamarra Adidas Adicolor negra">
-                <p>Conjunto Crew Niños</p>
-                <p>$1,049.00</p>                
-                <i><img src="img/remove.png" alt="Icono de remover producto del carrito" class="delete-icon"></i>
-            </div>                        
         </section>
     </main>
+
+    <nav class="navmenu">
+        <span class="close-icon close-menu">X</span>
+        <ul>
+            <li><a href="#">Calzado</a></li>
+            <li><a href="#">Mujer</a></li>
+            <li><a href="#">Hombre</a></li>
+            <li><a href="#">Ni&#241;os</a></li>
+            <li><a href="#">Deporte</a></li>
+            <li><a href="#">Mundo Adidas</a></li>
+        </ul>
+    </nav>
     <footer></footer>
+
+    <script src="js/funtions.js"></script>
 </body>
 </html>

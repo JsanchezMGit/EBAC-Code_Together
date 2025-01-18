@@ -1,6 +1,7 @@
 $fontFamlily: "Lexend", Arial, Helvetica, sans-serif;
 $blackColor:#333;
 $whiteColor:#fff;
+$blueColor: rgb(25, 25, 210);
 $bannerURL:"../img/banner.jpeg";
 $marginAuto:0 auto;
 
@@ -58,7 +59,7 @@ header {
     padding: 100px 0;
     text-align: center;
 
-    h2 {
+    h1 {
         @extend %width100;
         @include fontSize(30px, 600);
         margin: 10px;
@@ -83,6 +84,7 @@ header {
     article {
         cursor: pointer;
         text-align: center;
+        margin-bottom: 1em;
     }
     
     img {
@@ -100,16 +102,45 @@ header {
     }
 }
 
-.cart {
+.navmenu {
     background-color: $whiteColor;
     box-shadow: -19px 1px 22px -15px rgba(0, 0, 0, 0.3);
     box-sizing: border-box;
     height: 100%;
     padding: 25px;
     position: fixed;
+    left: -100%;
+    top: 0;
+    width: 300px;
+    transition: .5s;
+
+    ul {
+        li {
+            list-style-type: none;
+            padding: 12px 24px;
+            font-size: 20px;
+            font-weight: 600;
+            a {
+                text-decoration: none;
+                color: $blackColor;
+            }
+        }
+    }
+}
+
+.cart {
+    background-color: $whiteColor;
+    box-shadow: -19px 1px 22px -15px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    height: 100%;
+    padding: 20px;
+    position: fixed;
     right: -100%;
-    top: 100px;
-    width: 500px;
+    top: 0;
+    width: 600px;
+    transition: all .5s;
+    overflow-y:scroll;
+    overflow-x:hidden;
 
     h2 {
         @extend %width100;
@@ -118,10 +149,15 @@ header {
         padding: 25px 0;
         text-align: center;
     }
+
+    .cart-total {
+        display: none;
+        font-weight: 800;
+    }
     
     div {
         @include felxContainer;
-        border-bottom: 1px solid $blackColor;
+        
         padding: 15px;
 
         p:nth-child(3) {
@@ -131,16 +167,57 @@ header {
         i {
             cursor: pointer;
             width: 25px;
-        }        
+        }
+    }
+
+    .cart-product {
+        border-bottom: 1px solid $blackColor;
+        &-title {
+            min-width: 300px;
+            text-align: center;
+        }
     }
 
     img {
         width: 60px;
+        text-align: center;
     }
 
     .delete-icon {
         @extend %width100;
     }
+}
+
+.cart-count {
+    font-size: 12px;
+    background: $blueColor;
+    color: $whiteColor;
+    padding: .5em;
+    border-radius: 1em;
+    position: relative;
+    top: -50px;
+    right: -30px;
+}
+
+.close-icon {
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.show-left {
+    left: 0 !important;
+}
+
+.show-right {
+    right: 0 !important;
+}
+
+.btn {
+    border-radius: 15px;
+    background-color: $blueColor;
+    color: $whiteColor;
+    border: 0;
+    cursor: pointer;
 }
 
 @media (max-width: 820px) {
@@ -164,17 +241,26 @@ header {
         }        
     }
 
+    .navmenu,
     .cart {
-        top: 80px;
-        width: 400px;        
-    }    
+        width: 100%;
+    }
+    .cart-count {
+        font-size: 12px;
+        background: $blueColor;
+        color: $whiteColor;
+        padding: .5em;
+        border-radius: 1em;
+        top: 0;
+        right: 1px;
+    }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 520px) {
     .banner {
         padding: 30px 0;
 
-        h2 {
+        h1 {
             font-size: 18px;
         }
         
@@ -197,6 +283,11 @@ header {
         p {
             padding: 0 10px;
         }        
+    }
+
+    .navmenu {
+        box-shadow: none;
+        width: 100%;        
     }
 
     .cart {
